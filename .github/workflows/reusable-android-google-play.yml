@@ -209,8 +209,8 @@ jobs:
         with:
           path: |
             /usr/local/lib/android/sdk/ndk/27.0.12077973
-            /usr/local/lib/android/sdk/platforms/android-35
-          key: ${{ runner.os }}-android-sdk-ndk-27.0.12077973-platform-35-v1
+            /usr/local/lib/android/sdk/platforms/android-36
+          key: ${{ runner.os }}-android-sdk-ndk-27.0.12077973-platform-36-v1
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2

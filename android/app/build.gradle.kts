@@ -17,7 +17,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.nguyenduc.genz_money_mate"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 36
     ndkVersion = "27.0.12077973"
 
     signingConfigs {
@@ -45,7 +45,7 @@ android {
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         // google_mobile_ads 6.x requires Android API 23 or newer.
         minSdk = 23
-        targetSdk = flutter.targetSdkVersion
+        targetSdk = 36
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
