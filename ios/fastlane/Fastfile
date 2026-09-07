@@ -114,7 +114,6 @@ def validate_match_profile!(profile_name, profiles_directory: nil)
   team_id = Array(profile["TeamIdentifier"]).first
   entitlements = profile.fetch("Entitlements", {})
   application_identifier = entitlements["application-identifier"]
-  aps_environment = entitlements["aps-environment"]
   expected_application_identifier = "#{TEAM_ID}.#{APP_IDENTIFIER}"
 
   if team_id != TEAM_ID
@@ -128,11 +127,6 @@ def validate_match_profile!(profile_name, profiles_directory: nil)
     )
   end
 
-  if aps_environment != "production"
-    UI.user_error!(
-      "Match profile aps-environment must be production, got #{aps_environment.inspect}."
-    )
-  end
 end
 
 def archive_app_path
